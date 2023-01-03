@@ -1,0 +1,973 @@
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+.container:before {
+  position: fixed;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("/demo/wedding/assets/images/bg-texture.png") no-repeat;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+a, button, input, textarea {
+  position: relative;
+  z-index: 3;
+}
+
+[data-bg="background-full"] {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("/demo/wedding/assets/images/background.png") no-repeat;
+  background-size: cover;
+}
+
+.home-content {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.home-content:before {
+  position: fixed;
+  content: '';
+  width: 20.09346vw;
+  height: 11.21495vw;
+  background: url("/demo/wedding/assets/images/bell.svg") no-repeat;
+  background-size: 100% 100%;
+  left: 3.50467vw;
+  top: 3.50467vw;
+  z-index: 33;
+  animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+  transition: 1.5s ease-in-out;
+}
+
+.home-content__title {
+  margin-bottom: 7.00935vw;
+  position: relative;
+}
+
+.home-content__title:before {
+  position: absolute;
+  content: '';
+  background: url("/demo/wedding/assets/images/start-top.svg") no-repeat;
+  background-size: 100% 100%;
+  width: 35.04673vw;
+  height: 12.14953vw;
+  right: 7.00935vw;
+  top: -11.68224vw;
+  transform: rotate(10deg);
+}
+
+.home-content__title h1 {
+  margin: 17.52336vw 0 0;
+  text-align: center;
+  line-height: 1;
+  font-size: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.home-content__title h1 svg {
+  width: 63.08411vw;
+}
+
+.home-content__title h1 path {
+  stroke-dasharray: 50;
+  animation: dash 10s linear infinite;
+  stroke: #ffb400;
+  stroke-width: 1;
+}
+
+.home-content__name {
+  position: relative;
+  z-index: 3;
+}
+
+.home-content__name span svg {
+  width: auto;
+  height: 4.20561vw;
+}
+
+.home-content__name span svg path {
+  stroke-dasharray: 50;
+  animation: dash 10s linear infinite;
+  stroke: #a0a0a0;
+  stroke-width: 1;
+}
+
+.home-content__name:before {
+  position: absolute;
+  content: '';
+  width: 84.11215vw;
+  height: 16.35514vw;
+  background: url("/demo/wedding/assets/images/pict-name.svg") no-repeat;
+  bottom: -18.69159vw;
+  left: 4.6729vw;
+  transform: rotate(10deg);
+}
+
+.home-content__name h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  font-size: 7.71028vw;
+  letter-spacing: 2px;
+  margin: 0 0 4.6729vw;
+  position: relative;
+  z-index: 3;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+.home-content__info {
+  margin-top: 23.36449vw;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+.home-content__info:before {
+  position: absolute;
+  content: '';
+  width: 35.51402vw;
+  height: 28.97196vw;
+  background: url("/demo/wedding/assets/images/flower.svg") no-repeat;
+  background-size: 100% 100%;
+  left: 0;
+  right: 0;
+  top: 16.35514vw;
+  margin: auto;
+  opacity: 0.5;
+  animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+  transition: 1.5s ease-in-out;
+}
+
+.home-content__info-text {
+  font-size: 5.37383vw;
+  margin-bottom: 4.20561vw;
+}
+
+.home-content__info-name .xungdanh {
+  font-size: 4.20561vw;
+}
+
+.home-content__info-name .name {
+  font-size: 5.37383vw;
+}
+
+.home-content__text {
+  font-size: 4.43925vw;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  margin-top: 8.17757vw;
+  padding-left: 4.6729vw;
+  padding-right: 4.6729vw;
+  position: relative;
+  z-index: 3;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+.home-content__next {
+  margin-top: 4.6729vw;
+  text-align: right;
+  padding-right: 7.00935vw;
+  position: relative;
+  z-index: 100;
+  line-height: 3;
+}
+
+.home-content__next a {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  font-size: 3.73832vw;
+  position: relative;
+  padding-right: 9.34579vw;
+}
+
+.home-content__next a:before {
+  position: absolute;
+  content: '';
+  width: 5.84112vw;
+  height: 3.97196vw;
+  background: url("/demo/wedding/assets/images/arrow.svg") no-repeat;
+  right: 0;
+  bottom: 0;
+  background-size: 84% 84%;
+}
+
+.sub-content {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.sub-content__title {
+  padding-top: 11.68224vw;
+  margin-bottom: 7.00935vw;
+  position: relative;
+  z-index: 3;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+}
+
+.sub-content__title.bg-chen:before {
+  position: absolute;
+  content: '';
+  width: 14.95327vw;
+  height: 14.95327vw;
+  background: url("/demo/wedding/assets/images/chen.svg") no-repeat;
+  background-size: 100% 100%;
+  top: 3.50467vw;
+  left: 2.33645vw;
+}
+
+.sub-content__title h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 5.37383vw;
+  letter-spacing: 2px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  font-weight: normal;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+[data-page="thanks"] h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 7.00935vw;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+[data-page="thanks"] .sub-content__title {
+  padding-top: 9.34579vw;
+  margin-bottom: 4.6729vw;
+}
+
+[data-page="thanks"] .loichuc-btn {
+  margin-top: 8.17757vw;
+}
+
+[data-page="thanks"] .content__back {
+  margin-top: -63.08411vw;
+}
+
+.blog-info {
+  padding-left: 3.50467vw;
+  padding-right: 3.50467vw;
+  position: relative;
+  z-index: 100;
+}
+
+.blog-info__wedding {
+  margin-bottom: 11.68224vw;
+}
+
+.blog-info__wedding h3 {
+  position: relative;
+  font-size: 5.84112vw;
+  margin: 0 0 4.6729vw;
+  display: inline-flex;
+  position: relative;
+  z-index: 3;
+  font-weight: 500;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+.blog-info__wedding h3:before {
+  position: absolute;
+  content: '';
+  width: 23.36449vw;
+  height: 14.01869vw;
+  background: url("/demo/wedding/assets/images/bann.svg") no-repeat;
+  background-size: 100% 100%;
+  right: -25.70093vw;
+  bottom: -4.6729vw;
+}
+
+.blog-info__text {
+  line-height: 1.5;
+  font-size: 3.97196vw;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+.blog-info__map {
+  margin-top: 3.50467vw;
+  text-align: center;
+}
+
+.blog-info__map a {
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.03738vw;
+  text-decoration: none;
+  position: relative;
+}
+
+.blog-info__map a:before {
+  position: absolute;
+  content: '';
+  width: 2.57009vw;
+  height: 2.57009vw;
+  background: url("/demo/wedding/assets/images/map-icon.svg") no-repeat;
+  background-size: 100% 100%;
+  right: -3.03738vw;
+  bottom: 0.70093vw;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn button, .btn a {
+  border: 0;
+  background: none;
+  font-size: 4.43925vw;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  width: 100%;
+  max-width: 46.72897vw;
+  padding: 0;
+  position: relative;
+  line-height: 1.4;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+}
+
+.btn button:before, .btn a:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.35047vw;
+  background: #fff;
+  bottom: -2.33645vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.btn button:after, .btn a:after {
+  position: absolute;
+  content: '';
+  width: 4.43925vw;
+  height: 3.27103vw;
+  background: url("/demo/wedding/assets/images/arrow.svg") no-repeat;
+  background-size: 100% 100%;
+  right: 2.33645vw;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.thamdu-btn {
+  margin-bottom: 11.68224vw;
+  position: relative;
+  z-index: 100;
+}
+
+.thank-text {
+  padding-left: 3.50467vw;
+  padding-right: 3.50467vw;
+  text-align: center;
+  font-size: 3.97196vw;
+  line-height: 1.7;
+  position: relative;
+  z-index: 3;
+}
+
+.thanks-form {
+  text-align: center;
+  margin-top: 4.6729vw;
+}
+
+.thanks-form input, .thanks-form textarea {
+  max-width: 80%;
+}
+
+.field {
+  margin-bottom: 4.6729vw;
+}
+
+.field input, .field textarea {
+  width: 100%;
+  border: 0;
+  padding: 3.50467vw;
+  font-family: 'Josefin Sans', sans-serif;
+  outline: none;
+  font-size: 3.97196vw;
+  line-height: 1.5;
+}
+
+.field textarea {
+  height: 23.36449vw;
+}
+
+.modal-write__img {
+  position: relative;
+}
+
+.modal-write__img img {
+  width: 100%;
+}
+
+.modal-write__btn {
+  margin-top: 0vw;
+}
+
+.modal-write__btn ul {
+  padding: 0;
+  display: flex;
+  margin: 0 -3.50467vw;
+}
+
+.modal-write__btn ul li {
+  list-style: none;
+  width: 50%;
+  text-align: center;
+  padding: 3.50467vw 3.50467vw;
+  position: relative;
+  background: #fff;
+}
+
+.modal-write__btn ul li button {
+  padding: 0;
+  border: 0;
+  background: none;
+  height: 4.6729vw;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4.6729vw;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+}
+
+.preview-name {
+  position: absolute;
+  right: 21.02804vw;
+  bottom: 37.38318vw;
+  letter-spacing: 3px;
+  font-size: 4.43925vw;
+  font-family: 'Great Vibes', cursive;
+}
+
+.preview-txt {
+  position: absolute;
+  top: 32.71028vw;
+  font-size: 3.73832vw;
+  width: 51.40187vw;
+  height: 48.13084vw;
+  left: 20.3271vw;
+  line-height: 1.5;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.modaal-content-container {
+  padding: 0;
+}
+
+.modaal-content-container .modal-write__img {
+  width: 100%;
+  height: 100%;
+}
+
+.modaal-inner-wrapper {
+  padding-left: 3.50467vw;
+  padding-right: 3.50467vw;
+}
+
+.modaal-container {
+  background: transparent;
+}
+
+.modaal-gallery-control {
+  bottom: -60px;
+}
+
+.list-thanks {
+  padding: 0 3.50467vw;
+  margin-top: 7.00935vw;
+  height: 116.82243vw;
+  overflow: scroll;
+}
+
+.list-thanks ul {
+  padding: 4.6729vw 0 70.09346vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -1.63551vw;
+}
+
+.list-thanks ul li {
+  list-style: none;
+  width: 50%;
+  padding: 0 1.63551vw;
+  box-sizing: border-box;
+  margin-bottom: 3.27103vw;
+}
+
+.list-thanks ul li img {
+  width: 100%;
+}
+
+.content__back {
+  text-align: right;
+  margin-top: 14.01869vw;
+}
+
+.content__back a {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  font-size: 3.73832vw;
+  position: relative;
+  padding-right: 9.34579vw;
+}
+
+.content__back a:before {
+  position: absolute;
+  content: '';
+  width: 5.84112vw;
+  height: 3.97196vw;
+  background: url("/demo/wedding/assets/images/arrow.svg") no-repeat;
+  left: -10.51402vw;
+  bottom: 0;
+  background-size: 84% 84%;
+  transform: rotate(180deg);
+}
+
+.star {
+  height: 100px;
+  width: 100px;
+  transform: rotateZ(45deg);
+}
+
+.star:before {
+  display: block;
+  height: 0;
+  width: 4px;
+  border-radius: 5px;
+  background: linear-gradient(transparent, white);
+  animation: shooting 3s linear infinite;
+  content: "";
+}
+
+.star-box {
+  position: absolute;
+  top: 7.00935vw;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}
+
+.star-box.type2 {
+  top: 23.36449vw;
+  left: 0;
+}
+
+.star-box.type3 {
+  top: 40vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.star-box.type3 .star:before {
+  animation: shooting 4s linear infinite;
+}
+
+.star-box.type4 {
+  bottom: 0;
+  top: auto;
+  left: 0;
+}
+
+.star-box.type4 .star:before {
+  animation: shooting 5s linear infinite;
+}
+
+.star-box.type5 {
+  bottom: 0;
+  top: auto;
+  right: 9.34579vw;
+}
+
+.star-box.type5 .star:before {
+  animation: shooting 5.5s linear infinite;
+}
+
+@keyframes shooting {
+  0% {
+    height: 0;
+    opacity: 50%;
+  }
+  10% {
+    height: 60px;
+    opacity: 100%;
+  }
+  20% {
+    height: 70px;
+    opacity: 0;
+  }
+  100% {
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.home-content__footer, .sub-content__footer {
+  padding-top: 23.36449vw;
+  position: relative;
+  z-index: 3;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: -2.33645vw;
+}
+
+.footer img {
+  width: 100%;
+}
+
+.loading {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+
+.loading div {
+  width: 2.33645vw;
+  height: 2.33645vw;
+  background-color: #0ba9d5;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation-name: up-and-down;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.loading .two {
+  animation-delay: 0.3s;
+}
+
+.loading .three {
+  animation-delay: 0.6s;
+}
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-7px);
+  }
+}
+
+.bg-bird {
+  position: fixed;
+  top: calc(50vh - 140px);
+  bottom: 0;
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.bg-music {
+  position: absolute;
+  top: 21.02804vw;
+  right: 4.6729vw;
+  margin: auto;
+  text-align: center;
+  animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+  transition: 1.5s ease-in-out;
+}
+
+.bg-music img {
+  width: 70%;
+}
+
+.bg-ring {
+  position: absolute;
+  top: 50vh;
+  left: -14.01869vw;
+  margin: auto;
+  text-align: center;
+  animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+  transition: 1.5s ease-in-out;
+}
+
+.bg-ring img {
+  width: 30%;
+}
+
+.bg-gift {
+  position: absolute;
+  bottom: 20vh;
+  right: -9.34579vw;
+  margin: auto;
+  text-align: center;
+  animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+  transition: 1.5s ease-in-out;
+}
+
+.bg-gift img {
+  width: 30%;
+}
+
+[data-page='info'] .heart-box {
+  top: 0;
+  bottom: auto;
+}
+
+.qr-container {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .qr-container {
+    display: block;
+    position: fixed;
+    top: 50%;
+    bottom: 0;
+    z-index: 9;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 500;
+  }
+}
+
+.heart-box {
+  position: fixed;
+  width: 70.09346vw;
+  height: 116.82243vw;
+  margin: 0 auto 0;
+  z-index: 99;
+  bottom: -40.88785vw;
+  left: 0;
+  right: 0;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAyMCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5oZWFydDwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9ImhlYXJ0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNi4wMDAwMDAsIC03LjAwMDAwMCkiIGZpbGw9IiNEMDAyMUIiPiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNS41MjM4MDk1LDI1IEMxNiwyNSAxNiwyNSAxNi40NzYxOTA1LDI1IEwyNC4wOTUyMzgxLDE3IEMyNi41NDk4Njc5LDE0LjUxMzUwNDIgMjYuNTQ5ODY3OSwxMC45MDAxNDM2IDI0LjA5NTIzODEsOSBDMjIuMTUwOTIzNSw2LjQ0MjgzNjc3IDE4LjU4NDg3NSw2LjQ0MjgzNjc3IDE2LjQ3NjE5MDUsOSBDMTYsOSAxNiw5IDE1LjUyMzgwOTUsOSBDMTMuNDE1MTI1LDYuNDQyODM2NzcgOS44NDkwNzY0Niw2LjQ0MjgzNjc3IDcuOTA0NzYxOSw5IEM1LjQ1MDEzMjA3LDEwLjkwMDE0MzYgNS40NTAxMzIwNywxNC41MTM1MDQyIDcuOTA0NzYxOSwxNyBMMTUuNTIzODA5NSwyNSBaIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  height: 22px;
+  width: 22px;
+}
+
+.animate-topright {
+  position: absolute;
+  animation: movetopRight 6.5s 1s infinite;
+}
+
+.animate-bottomright {
+  position: absolute;
+  animation: movebottomRight 4.5s 1.7s infinite;
+}
+
+.animate-topleft {
+  position: absolute;
+  animation: movetopLeft 8.5s 5.4s infinite;
+}
+
+.animate-bottomleft {
+  position: absolute;
+  animation: movebottomLeft 7.5s 4.8s infinite;
+}
+
+.animate-up {
+  position: absolute;
+  animation: moveup 7.5s 2.2s infinite;
+}
+
+.animate-down {
+  position: absolute;
+  animation: movedown 5.5s 5.5s infinite;
+}
+
+.animate-left {
+  position: absolute;
+  animation: moveleft 5.5s 2.9s infinite;
+}
+
+.animate-right {
+  position: absolute;
+  animation: moveright 5.5s 3.4s infinite;
+}
+
+@keyframes movetopRight {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 10%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes movebottomRight {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes movetopLeft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes movebottomLeft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 90%;
+    left: 5%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveup {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 0%;
+    left: 45%;
+    opacity: 0;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    left: 45%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 45%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 45%;
+    left: 97%;
+    opacity: 0;
+  }
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+}
+
+@keyframes fuwafuwa2 {
+  0% {
+    transform: translate(0, 0) rotate(-3deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+}
+
+/*# sourceMappingURL=map/style.css.map */

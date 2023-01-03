@@ -1,0 +1,1038 @@
+$vw-viewport: 428;
+
+@function vw($unit) { // stylelint-disable-line at-rule-no-unknown
+	$vw-context: $vw-viewport * 0.01 * 1px;
+
+	@return $unit / $vw-context * 1vw; // stylelint-disable-line at-rule-no-unknown
+}
+
+
+body {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	font-family:'Josefin Sans', sans-serif;
+}
+.container {
+	position: relative;
+
+	&:before {
+		position: fixed;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: url('/demo/wedding/assets/images/bg-texture.png') no-repeat;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+}
+
+a, button, input, textarea {
+	position: relative;
+	z-index: 3;
+}
+
+[data-bg="background-full"] {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: url('/demo/wedding/assets/images/background.png') no-repeat;
+	background-size: cover;
+}
+
+.home-content {
+	overflow: hidden;
+	overflow-y: scroll;
+	position: relative;
+
+	&:before {
+		position: fixed;
+		content: '';
+		width: vw(86px);
+		height: vw(48px);
+		background: url('/demo/wedding/assets/images/bell.svg') no-repeat;
+		background-size: 100% 100%;
+		left: vw(15px);
+		top: vw(15px);
+		z-index: 33;
+		animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+		transition: 1.5s ease-in-out;
+	}
+
+	&__title {
+		margin-bottom: vw(30px);
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			background: url('/demo/wedding/assets/images/start-top.svg') no-repeat;
+			background-size: 100% 100%;
+			width: vw(150px);
+			height: vw(52px);
+			right: vw(30px);
+			top: vw(-50px);
+			transform: rotate(10deg);
+		}
+
+		h1 {
+			margin: vw(75px) 0 0;
+			text-align: center;
+			line-height: 1;
+			font-size: 0;
+			position: relative;
+			z-index: 3;
+
+			svg {
+				width: vw(270px);
+			}
+
+
+			path {
+        stroke-dasharray: 50;
+				animation: dash 10s linear infinite;
+				stroke: #ffb400;
+				stroke-width: 1;
+      }
+		}
+	}
+
+	&__name {
+		position: relative;
+		z-index: 3;
+
+		span {
+			svg {
+				width: auto;
+				height: vw(18px);
+
+				path {
+					stroke-dasharray: 50;
+			    animation: dash 10s linear infinite;
+			    stroke: #a0a0a0;
+			    stroke-width: 1;
+				}
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: vw(360px);
+			height: vw(70px);
+			background: url('/demo/wedding/assets/images/pict-name.svg') no-repeat;
+			bottom: vw(-80px);
+			left: vw(20px);
+			transform: rotate(10deg);
+		}
+
+		h2 {
+			font-family: 'Dancing Script', cursive;
+			font-weight: bold;
+			text-align: center;
+			color: #fff;
+			font-size: vw(33px);
+			letter-spacing: 2px;
+			margin: 0 0 vw(20px);
+			position: relative;
+			z-index: 3;
+			text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+		}
+	}
+
+	&__info {
+		margin-top: vw(100px);
+		text-align: center;
+		font-family:'Josefin Sans', sans-serif;
+		font-weight: 500;
+		color: #fff;
+		position: relative;
+		z-index: 3;
+		text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: vw(152px);
+			height: vw(124px);
+			background: url('/demo/wedding/assets/images/flower.svg') no-repeat;
+			background-size: 100% 100%;
+			left: 0;
+			right: 0;
+			top: vw(70px);
+			margin: auto;
+			opacity: 0.5;
+			animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+			transition: 1.5s ease-in-out;
+		}
+
+		&-text {
+			font-size: vw(23px);
+			margin-bottom: vw(18px);
+		}
+
+		&-name {
+			.xungdanh {
+				font-size: vw(18px);
+			}
+
+			.name {
+				font-size: vw(23px);
+			}
+		}
+	}
+
+	&__text {
+		font-size: vw(19px);
+		letter-spacing: 1.3px;
+		line-height: 1.5;
+		color: #fff;
+		text-align: center;
+		font-family:'Josefin Sans', sans-serif;
+		font-weight: 400;
+		margin-top: vw(35px);
+		padding-left: vw(20px);
+		padding-right: vw(20px);
+		position: relative;
+		z-index: 3;
+		text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+	}
+
+	&__next {
+		margin-top: vw(20px);
+		text-align: right;
+		padding-right: vw(30px);
+		position: relative;
+		z-index: 100;
+		line-height: 3;
+		a {
+			font-family:'Josefin Sans', sans-serif;
+			color: #fff;
+			font-size: vw(16px);
+			position: relative;
+			padding-right: vw(40px);
+
+			&:before {
+				position: absolute;
+				content: '';
+				width: vw(25px);
+				height: vw(17px);
+				background: url('/demo/wedding/assets/images/arrow.svg') no-repeat;
+				right: 0;
+				bottom: 0;
+				background-size: 84% 84%;
+			}
+		}
+	}
+
+	&__footer {
+	}
+}
+
+// sub-content
+
+.sub-content {
+	overflow:hidden;
+	overflow-y: scroll;
+	position: relative;
+
+	&__title {
+		padding-top: vw(50px);
+		margin-bottom: vw(30px);
+		position: relative;
+		z-index: 3;
+		font-family: 'Dancing Script', cursive;
+		font-weight: bold;
+
+		&.bg-chen {
+			&:before {
+				position: absolute;
+				content: '';
+				width: vw(64px);
+				height: vw(64px);
+				background: url('/demo/wedding/assets/images/chen.svg') no-repeat;
+				background-size: 100% 100%;
+				top: vw(15px);
+				left: vw(10px);
+			}
+		}
+
+		h1 {
+			text-align: center;
+			color: #fff;
+			font-size: vw(23px);
+			letter-spacing: 2px;
+			margin: 0;
+			position: relative;
+			z-index: 3;
+			font-weight: normal;
+			text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+
+		}
+	}
+}
+
+[data-page="thanks"] {
+	h1 {
+		font-family: 'Great Vibes', cursive;
+		font-size: vw(30px);
+		font-weight: normal;
+		letter-spacing: 3px;
+	}
+
+	.sub-content__title {
+		padding-top: vw(40px);
+		margin-bottom: vw(20px);
+	}
+
+	.loichuc-btn {
+		margin-top: vw(35px);
+	}
+
+	.content__back {
+		margin-top: vw(-270px);
+	}
+}
+
+.blog-info {
+	padding-left: vw(15px);
+	padding-right: vw(15px);
+	position: relative;
+	z-index: 100;
+
+	&__wedding {
+		margin-bottom: vw(50px);
+
+		h3 {
+			position: relative;
+			font-size: vw(25px);
+			margin: 0 0 vw(20px);
+			display: inline-flex;
+			position: relative;
+			z-index: 3;
+			font-weight: 500;
+			text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+			&:before {
+				position: absolute;
+				content: '';
+				width: vw(100px);
+				height: vw(60px);
+				background: url('/demo/wedding/assets/images/bann.svg') no-repeat;
+				background-size: 100% 100%;
+				right: vw(-110px);
+				bottom: vw(-20px);
+			}
+		}
+	}
+
+	&__text {
+		line-height: 1.5;
+		font-size: vw(17px);
+		text-align: center;
+		color: #fff;
+		font-weight: 500;
+		text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+	}
+
+	&__map {
+		margin-top: vw(15px);
+		text-align: center;
+		
+		a {
+			color: #000;
+			text-align: center;
+			font-weight: bold;
+			font-size: vw(13px);
+			text-decoration: none;
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				width: vw(11px);
+				height: vw(11px);
+				background: url('/demo/wedding/assets/images/map-icon.svg') no-repeat;
+				background-size: 100% 100%;
+				right: vw(-13px);
+				bottom: vw(3px);
+			}
+		}
+	}
+}
+
+.btn {
+	text-align: center;
+	button, a {
+		border: 0;
+		background: none;
+		font-size: vw(19px);
+		color: #fff;
+		font-family:'Josefin Sans', sans-serif;
+		font-weight: 500;
+		width: 100%;
+		max-width: vw(200px);
+		padding: 0;
+		position: relative;
+		line-height: 1.4;
+		text-decoration: none;
+		display: block;
+		margin: auto;
+		text-shadow: -1px 0 #a0a0a0, 0 1px #a0a0a0, 1px 0 #a0a0a0, 0 -1px #a0a0a0;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: vw(1.5px);
+			background: #fff;
+			bottom: vw(-10px);
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			width: vw(19px);
+			height: vw(14px);
+			background: url('/demo/wedding/assets/images/arrow.svg') no-repeat;
+			background-size: 100% 100%;
+			right: vw(10px);
+			bottom: 0;
+			top: 0;
+			margin: auto;
+		}
+	}
+}
+
+.thamdu-btn {
+	margin-bottom: vw(50px);
+	position: relative;
+	z-index: 100;
+}
+
+.thank-text {
+	padding-left: vw(15px);
+	padding-right: vw(15px);
+	text-align: center;
+	font-size: vw(17px);
+	line-height: 1.7;
+	position: relative;
+	z-index: 3;
+}
+
+.thanks-form {
+	text-align: center;
+	margin-top: vw(20px);
+
+	input, textarea {
+		max-width: 80%;
+	}
+}
+
+
+.field {
+	margin-bottom: vw(20px);
+
+	input, textarea {
+		width: 100%;
+		border: 0;
+		padding: vw(15px);
+		font-family:'Josefin Sans', sans-serif;
+		outline: none;
+		font-size: vw(17px);
+		line-height: 1.5;
+	}
+
+	textarea {
+		height: vw(100px);
+	}
+}
+
+.modal-write {
+
+	&__img {
+		position: relative;
+		// width: vw(427px);
+		// height: vw(300px);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__btn {
+		margin-top: vw(0px);
+
+		ul {
+			padding: 0;
+			display: flex;
+			margin: 0 vw(-15px);
+
+			li {
+				list-style: none;
+				width: 50%;
+				text-align: center;
+				padding: vw(15px) vw(15px);
+				position: relative;
+				background: #fff;
+
+				button {
+					padding: 0;
+					border: 0;
+					background: none;
+					height: vw(20px);
+					font-family:'Josefin Sans', sans-serif;
+					font-size: vw(20px);
+					font-weight: bold;
+					color: #000;
+					position: relative;
+				}
+			}
+		}
+	}
+}
+
+.preview {
+
+	&-name {
+		position: absolute;
+		right: vw(90px);
+		bottom: vw(160px);
+		letter-spacing: 3px;
+		font-size: vw(19px);
+		font-family: 'Great Vibes', cursive;
+	}
+
+	&-txt {
+		position: absolute;
+		top: vw(140px);
+		font-size: vw(16px);
+		width: vw(220px);
+		height: vw(206px);
+		left: vw(87px);
+		line-height: 1.5;
+		overflow: hidden;
+		word-break: break-all;
+	}
+}
+
+.modaal-content-container {
+	padding: 0;
+
+	.modal-write__img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.preview {
+		// opacity: 0;
+	}
+}
+.modaal-inner-wrapper {
+	padding-left: vw(15px);
+	padding-right: vw(15px);
+}
+
+.modaal-container {
+	background: transparent;
+}
+
+.modaal-gallery-control {
+	bottom: -60px;
+}
+
+.list-thanks {
+	padding: 0 vw(15px);
+	margin-top: vw(30px);
+	height: vw(500px);
+	overflow: scroll;
+
+	ul {
+		padding: vw(20px) 0 vw(300px);
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 vw(-7px);
+
+		li {
+			list-style: none;
+			width: 50%;
+			padding: 0 vw(7px);
+			box-sizing: border-box;
+			margin-bottom: vw(14px);
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.content__back {
+	text-align: right;
+	margin-top: vw(60px);
+	a {
+		font-family:'Josefin Sans', sans-serif;
+	    color: #fff;
+	    font-size: 3.73832vw;
+	    position: relative;
+	    padding-right: 9.34579vw;
+
+	    &:before {
+	    	position: absolute;
+			content: '';
+			width: vw(25px);
+			height: vw(17px);
+			background: url('/demo/wedding/assets/images/arrow.svg') no-repeat;
+			left: vw(-45px);
+			bottom: 0;
+			background-size: 84% 84%;
+			transform: rotate(180deg);
+	    }
+	}
+}
+
+.star {
+	height: 100px;
+	width: 100px;
+	transform: rotateZ(45deg);
+	&:before {
+		display: block;
+	  height: 0;
+	  // height: 80px;
+	  width: 4px;
+	  border-radius: 5px;
+	  background: linear-gradient(transparent, rgb(255, 255, 255));
+	  animation: shooting 3s linear infinite;
+	  content: "";
+	}
+	&-box {
+		position: absolute;
+		top: vw(30px);
+    	right: 0;
+		height: 100px;
+		width: 100px;
+
+		&.type2 {
+			top: vw(100px);
+			left: 0;
+		}
+
+		&.type3 {
+			top: 40vh;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+			.star {
+				&:before {
+					animation: shooting 4s linear infinite;
+				}
+			}
+		}
+
+		&.type4 {
+			bottom: 0;
+			top: auto;
+			left: 0;
+
+			.star {
+				&:before {
+					animation: shooting 5s linear infinite;
+				}
+			}
+		}
+
+		&.type5 {
+			bottom: 0;
+			top: auto;
+			right: vw(40px);
+
+			.star {
+				&:before {
+					animation: shooting 5.5s linear infinite;
+				}
+			}
+		}
+	}
+}
+
+@keyframes shooting {
+  0% {
+    height: 0;
+    opacity: 50%;
+  }
+
+
+  10% {
+    height: 60px;
+    opacity: 100%;
+  }
+
+  20% {
+    height: 70px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.home-content__footer, .sub-content__footer {
+	padding-top: vw(100px);
+	position: relative;
+	z-index: 3;
+}
+.footer {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: vw(-10px);
+
+	img {
+		width: 100%;
+	}
+}
+
+
+.loading {
+    display: none;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+
+    div {
+    	width: vw(10px);
+	    height: vw(10px);
+	    background-color: rgb(11, 169, 213);
+	    border-radius: 50%;
+	    margin: 0 2px;
+	    animation-name: up-and-down;
+	    animation-duration: 0.8s;
+	    animation-iteration-count: infinite;
+	    animation-direction: alternate;
+    }
+
+    .two {
+    	animation-delay: 0.3s;
+    }
+
+    .three {
+    	 animation-delay: 0.6s;
+    }
+}
+
+@keyframes up-and-down {
+  
+    to{
+        opacity: 0.2;
+        transform: translateY(-7px);
+        
+    }
+}
+
+.bg {
+	&-bird {
+		position: fixed;
+		top: calc(50vh - 140px);
+		bottom: 0;
+		opacity: 0.5;
+		left: 0;
+		right: 0;
+		margin: auto;
+		text-align: center;
+	}
+
+	&-music {
+		position: absolute;
+		top: vw(90px);
+		right: vw(20px);
+		margin: auto;
+		text-align: center;
+		animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+    transition: 1.5s ease-in-out;
+
+		img {
+			width: 70%;
+		}
+	}
+
+	&-ring {
+		position: absolute;
+		top: 50vh;
+		left: vw(-60px);
+		margin: auto;
+		text-align: center;
+		animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+    transition: 1.5s ease-in-out;
+
+    img {
+    	width: 30%;
+    }
+	}
+
+	&-gift {
+		position: absolute;
+		bottom: 20vh;
+		right: vw(-40px);
+		margin: auto;
+		text-align: center;
+		animation: fuwafuwa2 3s infinite ease-in-out .8s alternate;
+    transition: 1.5s ease-in-out;
+
+    img {
+    	width: 30%;
+    }
+	}
+}
+
+[data-page='info'] {
+	.heart-box {
+		top: 0;
+		bottom: auto;
+	}
+}
+
+// qr
+.qr-container {
+	display: none;
+}
+
+@media (min-width: 769px) {
+	.qr-container {
+		display: block;
+		position: fixed;
+    top: 50%;
+    bottom: 0;
+    z-index: 9;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+	}
+}
+
+
+// animation
+@keyframes dash {
+    to {
+        stroke-dashoffset: 500;
+    }
+}
+
+
+// heart
+
+
+.heart-box {
+  position: fixed;
+  width: vw(300px);
+  height: vw(500px);
+  margin: 0 auto 0;
+  z-index: 99;
+  bottom: vw(-175px);
+  left: 0;
+  right: 0;
+
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAyMCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5oZWFydDwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9ImhlYXJ0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNi4wMDAwMDAsIC03LjAwMDAwMCkiIGZpbGw9IiNEMDAyMUIiPiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNS41MjM4MDk1LDI1IEMxNiwyNSAxNiwyNSAxNi40NzYxOTA1LDI1IEwyNC4wOTUyMzgxLDE3IEMyNi41NDk4Njc5LDE0LjUxMzUwNDIgMjYuNTQ5ODY3OSwxMC45MDAxNDM2IDI0LjA5NTIzODEsOSBDMjIuMTUwOTIzNSw2LjQ0MjgzNjc3IDE4LjU4NDg3NSw2LjQ0MjgzNjc3IDE2LjQ3NjE5MDUsOSBDMTYsOSAxNiw5IDE1LjUyMzgwOTUsOSBDMTMuNDE1MTI1LDYuNDQyODM2NzcgOS44NDkwNzY0Niw2LjQ0MjgzNjc3IDcuOTA0NzYxOSw5IEM1LjQ1MDEzMjA3LDEwLjkwMDE0MzYgNS40NTAxMzIwNywxNC41MTM1MDQyIDcuOTA0NzYxOSwxNyBMMTUuNTIzODA5NSwyNSBaIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  height:22px;
+  width:22px;
+}
+
+
+@mixin animation($name, $duration, $delay, $count) {
+  -webkit-animation: $name $duration $delay $count;
+  -moz-animation: $name $duration $delay $count;
+  -o-animation: $name $duration $delay $count;
+  -ms-animation: $name $duration $delay $count;
+  animation: $name $duration $delay $count;
+}
+
+
+.animate-topright {
+  position: absolute;
+  @include animation(movetopRight, 6.5s, 1s, infinite);
+}
+
+.animate-bottomright {
+  position: absolute;
+  @include animation(movebottomRight, 4.5s, 1.7s, infinite);
+}
+
+.animate-topleft {
+  position: absolute;
+  @include animation(movetopLeft, 8.5s, 5.4s, infinite);
+}
+
+.animate-bottomleft {
+  position: absolute;
+  @include animation(movebottomLeft, 7.5s, 4.8s, infinite);
+}
+
+.animate-up {
+  position: absolute;
+  @include animation(moveup, 7.5s, 2.2s, infinite);
+}
+
+.animate-down {
+  position: absolute;
+  @include animation(movedown, 5.5s, 5.5s, infinite);
+}
+
+.animate-left {
+  position: absolute;
+  @include animation(moveleft, 5.5s, 2.9s, infinite);
+}
+
+.animate-right {
+  position: absolute;
+  @include animation(moveright, 5.5s, 3.4s, infinite);
+}
+
+@keyframes movetopRight {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 10%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes movebottomRight {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes movetopLeft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes movebottomLeft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 90%;
+    left: 5%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveup {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 0%;
+    left: 45%;
+    opacity: 0;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    left: 45%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 45%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 45%;
+    left: 97%;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes fuwafuwa {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
+
+@keyframes fuwafuwa2 {
+  0% {
+    transform:translate(0, 0) rotate(-3deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
