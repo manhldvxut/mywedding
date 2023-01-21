@@ -123,7 +123,7 @@ a, button, input, textarea {
   font-weight: bold;
   text-align: center;
   color: #fff;
-  font-size: 7.71028vw;
+  font-size: 8.8785vw;
   letter-spacing: 2px;
   margin: 0 0 4.6729vw;
   position: relative;
@@ -389,6 +389,11 @@ a, button, input, textarea {
 
 .thamdu-btn {
   margin-bottom: 11.68224vw;
+  position: relative;
+  z-index: 100;
+}
+
+.loichuc-btn {
   position: relative;
   z-index: 100;
 }

@@ -50,7 +50,9 @@
                     <div class="thanks-form__write">
                         <div class="field">
                             <textarea placeholder="Lời chúc từ bạn" maxlength="150"></textarea>
+                            <small style="display: block;">Tối đa 150 chữ</small>
                         </div>
+
                     </div>
                     
                 </div>
@@ -137,7 +139,7 @@
     
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="/demo/wedding/assets/js/qrcode.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
 

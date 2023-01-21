@@ -1,6 +1,10 @@
 
 
+
+
 $(function(){
+
+
   // window check
 
   var path = window.location.href.split('?id=')[1];
@@ -362,8 +366,8 @@ $(function(){
     // vxut friend
     {
       id: 71,
-      xungdanh: '',
-      Name: 'Bạn Thành Hiếu'
+      xungdanh: 'Bạn',
+      Name: 'Thành Hiếu'
     },
     {
       id: 72,
@@ -404,6 +408,11 @@ $(function(){
       id: 79,
       xungdanh: '',
       Name: 'Gia đình anh Nam'
+    },
+    {
+      id: 101,
+      xungdanh: '',
+      Name: 'Gia đình anh Hòa'
     },
     // japan
     {
@@ -451,6 +460,63 @@ $(function(){
       id: 88,
       xungdanh: '',
       Name: 'Gia đình bạn Bình'
+    },
+    {
+      id: 89,
+      xungdanh: '',
+      Name: 'Gia đình bạn Thương' // khoai tay Map
+    },
+    {
+      id: 90,
+      xungdanh: '',
+      Name: 'Bạn Dung' // Dung cọc
+    },
+    // 23.01.21 --> Gia đình 
+    {
+      id: 110,
+      xungdanh: 'Anh',
+      Name: ' Xương + NT'
+    },
+    {
+      id: 111,
+      xungdanh: '',
+      Name: 'Gia đình bạn Trâm Thi'
+    },
+    // Gia đình 
+    {
+      id: 200,
+      xungdanh: 'Chị',
+      Name: 'Quỳnh'
+    },
+    {
+      id: 201,
+      xungdanh: 'Em',
+      Name: 'Đại'
+    },
+    {
+      id: 202,
+      xungdanh: 'Em',
+      Name: 'Toàn'
+    },
+    {
+      id: 203,
+      xungdanh: 'Chị',
+      Name: 'Hồng'
+    },
+    {
+      id: 204,
+      xungdanh: 'Chị',
+      Name: 'Lan'
+    },
+    {
+      id: 205,
+      xungdanh: 'Anh',
+      Name: 'Tiến'
+    },
+    {
+      id: 206,
+      xungdanh: 'Anh',
+      Name: 'Long'
     }
   ];
 
@@ -487,6 +553,8 @@ $(function(){
     })
 
   }
+
+
 
   $('.thamdu-btn button').click(function() {
      $.ajax({

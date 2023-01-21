@@ -124,7 +124,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="/demo/wedding/assets/js/qrcode.min.js"></script>
     <script src="/demo/wedding/assets/js/private.js"></script>
 </body>
 
