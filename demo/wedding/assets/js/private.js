@@ -90,22 +90,22 @@ $(function(){
     {
       id: 16,
       xungdanh: 'Bạn',
-      Name: 'Hồng Minh & NT'
+      Name: 'Hồng Minh & Đức'
     },
     {
       id: 17,
       xungdanh: 'Bạn',
-      Name: 'Đức & NT'
+      Name: 'Đức & Hồng Minh'
     },
     {
       id: 18,
       xungdanh: 'Bạn',
-      Name: 'Bảo & NT'
+      Name: 'Bảo & Đăng'
     },
     {
       id: 19,
       xungdanh: 'Bạn',
-      Name: 'Đăng & NT'
+      Name: 'Đăng & Bảo'
     },
     {
       id: 20,
@@ -471,18 +471,33 @@ $(function(){
       xungdanh: '',
       Name: 'Bạn Dung' // Dung cọc
     },
-    // 23.01.21 --> Gia đình 
+    // 23.01.21 --> Gia đình
     {
       id: 110,
       xungdanh: 'Anh',
-      Name: ' Xương + NT'
+      Name: ' Sương + NT'
     },
     {
       id: 111,
       xungdanh: '',
       Name: 'Gia đình bạn Trâm Thi'
     },
-    // Gia đình 
+    {
+      id: 112,
+      xungdanh: 'Bạn',
+      Name: 'Dương & NT'
+    },
+    {
+      id: 113,
+      xungdanh: 'Chị',
+      Name: 'Trân & sweetheart'
+    },
+    {
+      id: 114,
+      xungdanh: 'Em',
+      Name: 'Dung & NT'
+    },
+    // Gia đình
     {
       id: 200,
       xungdanh: 'Chị',
@@ -517,7 +532,18 @@ $(function(){
       id: 206,
       xungdanh: 'Anh',
       Name: 'Long'
-    }
+    },
+    // jp
+    {
+      id: 20612231,
+      xungdanh: '課長',
+      Name: '町田'
+    },
+    {
+      id: 1334223,
+      xungdanh: '部長',
+      Name: '丸山'
+    },
   ];
 
   for(let i=0; i< danhsach.length; i++) {
@@ -529,11 +555,21 @@ $(function(){
         Name: danhsach[i].id
       };
 
-      $('.home-content__next a').attr('href', '/demo/wedding/info/?id='+danhsach[i].id)
+      if($('[data-languae="jp"]').length > 0) {
+        $('.home-content__next a').attr('href', '/demo/wedding/jp/info/?id='+danhsach[i].id)
 
-      $('.content__back a').attr('href','/demo/wedding/?id='+ danhsach[i].id)
+        $('.content__back a').attr('href','/demo/wedding/jp/?id='+ danhsach[i].id)
 
-      $('.loichuc-btn a').attr('href','/demo/wedding/thanks/?id='+ danhsach[i].id)
+        $('.loichuc-btn a').attr('href','/demo/wedding/jp/thanks/?id='+ danhsach[i].id)
+
+      } else {
+       $('.home-content__next a').attr('href', '/demo/wedding/info/?id='+danhsach[i].id)
+
+        $('.content__back a').attr('href','/demo/wedding/?id='+ danhsach[i].id)
+
+        $('.loichuc-btn a').attr('href','/demo/wedding/thanks/?id='+ danhsach[i].id) 
+      }
+      
     }
   }
 
@@ -569,11 +605,11 @@ $(function(){
     // let text = "Vui lòng xác nhận\nOK  Cancel";
 
     // if (confirm(text) == true) {
-     
+
     // } else {
-    //  // 
+    //  //
     // }
-    
+
   })
 
 
@@ -665,7 +701,13 @@ $(function(){
         $('.loading').css({
           'display': 'none'
         })
-        location.reload();
+        
+
+        if($('[data-languae="jp"]').length > 0) {
+          window.location.href = '/demo/wedding/thanks/'
+        } else {
+          location.reload();
+        }
     }).fail(function(e) {
         console.log(e)
         alert('Hệ thống lỗi. Vui lòng gửi lại !!!')

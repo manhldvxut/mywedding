@@ -1041,3 +1041,57 @@ a, button, input, textarea {
     transform:translate(0, 0) rotate(7deg);
   }
 }
+
+[data-languae="jp"] {
+	font-family: 'Noto Sans JP', sans-serif !important;
+
+	.home-content__text {
+		font-size: vw(14px);
+		line-height: 1.9;
+	}
+
+	.home-content__info-text {
+		font-size: vw(30px);
+	}
+
+	.home-content__info {
+		margin-top: vw(70px);
+	}
+
+	.home-content__info-name {
+		position: relative;
+		z-index: 33;
+	}
+
+	.home-content__next a {
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	.home-content__text {
+		text-shadow: none;
+	}
+
+	.blog-info__text {
+		text-shadow: none;
+	}
+
+	.btn button, .btn a {
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	.content__back a {
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	.thanks-form__name {
+		input, textarea {
+			&::placeholder {
+				font-family: 'Noto Sans JP', sans-serif;
+			}
+		}
+	}
+
+	.modal-write__btn ul li button {
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+}

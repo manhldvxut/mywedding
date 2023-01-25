@@ -975,4 +975,58 @@ a, button, input, textarea {
   }
 }
 
+[data-languae="jp"] {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+[data-languae="jp"] .home-content__text {
+  font-size: 3.27103vw;
+  line-height: 1.9;
+}
+
+[data-languae="jp"] .home-content__info-text {
+  font-size: 7.00935vw;
+}
+
+[data-languae="jp"] .home-content__info {
+  margin-top: 16.35514vw;
+}
+
+[data-languae="jp"] .home-content__info-name {
+  position: relative;
+  z-index: 33;
+}
+
+[data-languae="jp"] .home-content__next a {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-languae="jp"] .home-content__text {
+  text-shadow: none;
+}
+
+[data-languae="jp"] .blog-info__text {
+  text-shadow: none;
+}
+
+[data-languae="jp"] .btn button, [data-languae="jp"] .btn a {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-languae="jp"] .content__back a {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-languae="jp"] .thanks-form__name input::-moz-placeholder, [data-languae="jp"] .thanks-form__name textarea::-moz-placeholder {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-languae="jp"] .thanks-form__name input::placeholder, [data-languae="jp"] .thanks-form__name textarea::placeholder {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+[data-languae="jp"] .modal-write__btn ul li button {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 /*# sourceMappingURL=map/style.css.map */
